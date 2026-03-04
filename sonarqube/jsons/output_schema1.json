@@ -1,0 +1,70 @@
+[
+  [
+    {
+      "child": [
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "1.1",
+          "isExpanded": true,
+          "isMultiple": false,
+          "name": "bill_number"
+        },
+        {
+          "child": [],
+          "dataType": "DATE",
+          "id": "1.2",
+          "isExpanded": true,
+          "isMultiple": false,
+          "name": "date"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "1.3",
+          "isExpanded": true,
+          "isMultiple": false,
+          "name": "place"
+        }
+      ],
+      "dataType": "OBJECT",
+      "id": 1,
+      "isExpanded": true,
+      "isMultiple": false,
+      "name": " bill_of_exchange"
+    },
+    {
+      "child": [
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "2.1",
+          "isExpanded": true,
+          "isMultiple": false,
+          "name": "po_number"
+        },
+        {
+          "child": [],
+          "dataType": "DATE",
+          "id": "2.2",
+          "isExpanded": true,
+          "isMultiple": false,
+          "name": "date"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "2.3",
+          "isExpanded": true,
+          "isMultiple": false,
+          "name": "vendor_name"
+        }
+      ],
+      "dataType": "OBJECT",
+      "id": 2,
+      "isExpanded": true,
+      "isMultiple": false,
+      "name": "purchase_order"
+    }
+  ]
+]

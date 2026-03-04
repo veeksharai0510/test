@@ -1,0 +1,418 @@
+[
+  [
+    {
+      "child": [
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "1.1",
+          "isExpanded": true,
+          "isMultiple": false,
+          "name": "Currency"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "1.2",
+          "isExpanded": true,
+          "isMultiple": false,
+          "name": "Denomination"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "1.3",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Year"
+        }
+      ],
+      "dataType": "OBJECT",
+      "id": 1,
+      "isExpanded": false,
+      "isMultiple": false,
+      "name": "Header Info"
+    },
+    {
+      "child": [
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "2.2",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Cash & Bank Balance"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "2.3",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Investments"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "2.4",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Inventory"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "2.5",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Receivables"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "2.6",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Prepaid Expenses"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "2.7",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Loans & Advances"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "2.8",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Other Current Assets"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "2.9",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Total Current Assets"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "2.10",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Notes - Current Assets"
+        }
+      ],
+      "dataType": "OBJECT",
+      "id": 2,
+      "isExpanded": false,
+      "isMultiple": false,
+      "name": "Current Assets"
+    },
+    {
+      "child": [
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "3.2",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Fixed Assets (Net Block)"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "3.3",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Capital Work-in-Progress"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "3.4",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Investments (Non-Current)"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "3.5",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Intangible Assets"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "3.6",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Deferred Tax Assets"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "3.7",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Loans & Advances"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "3.8",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Other Non-Current Assets"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "3.9",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Total Non-Current Assets"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "3.10",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Total Assets"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "3.11",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Notes - Non-Current Assets"
+        }
+      ],
+      "dataType": "OBJECT",
+      "id": 3,
+      "isExpanded": false,
+      "isMultiple": false,
+      "name": "Non-Current Assets"
+    },
+    {
+      "child": [
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "4.2",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Short-Term Borrowings"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "4.3",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Trade Payables"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "4.4",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Provisions"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "4.5",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Current Maturities of Long-Term Debt"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "4.6",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Current Tax Liabilities"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "4.7",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Other Current Liabilities"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "4.8",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Total Current Liabilities"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "4.9",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Notes - Current Liabilities"
+        }
+      ],
+      "dataType": "OBJECT",
+      "id": 4,
+      "isExpanded": false,
+      "isMultiple": false,
+      "name": "Current Liabilities"
+    },
+    {
+      "child": [
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "5.2",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Long-Term Borrowings"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "5.3",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Deferred Tax Liabilities"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "5.4",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Provisions (Non-Current)"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "5.5",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Other Non-Current Liabilities"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "5.6",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Total Non-Current Liabilities"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "5.7",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Total Liabilities"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "5.8",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Notes - Non-Current Liabilities"
+        }
+      ],
+      "dataType": "OBJECT",
+      "id": 5,
+      "isExpanded": false,
+      "isMultiple": false,
+      "name": "Non-Current Liabilities"
+    },
+    {
+      "child": [
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "6.2",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Share Capital"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "6.3",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Reserves & Surplus"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "6.4",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Treasury Shares"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "6.5",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Non-Controlling Interests"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "6.6",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Other Equity Components"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "6.7",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Total Equity"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "6.8",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Total Liabilities and Equity"
+        },
+        {
+          "child": [],
+          "dataType": "STRING",
+          "id": "6.9",
+          "isExpanded": true,
+          "isMultiple": true,
+          "name": "Notes - Equity"
+        }
+      ],
+      "dataType": "OBJECT",
+      "id": 6,
+      "isExpanded": false,
+      "isMultiple": false,
+      "name": "Equity"
+    }
+  ]
+]

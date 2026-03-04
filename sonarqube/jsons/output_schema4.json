@@ -1,0 +1,52 @@
+[
+  [
+    {
+      "child": [],
+      "dataType": "STRING",
+      "id": 1,
+      "isExpanded": true,
+      "isMultiple": false,
+      "name": "rating"
+    },
+    {
+      "child": [],
+      "dataType": "STRING",
+      "id": 2,
+      "isExpanded": true,
+      "isMultiple": false,
+      "name": "key_drivers"
+    },
+    {
+      "child": [],
+      "dataType": "STRING",
+      "id": 3,
+      "isExpanded": true,
+      "isMultiple": false,
+      "name": "strengths"
+    },
+    {
+      "child": [],
+      "dataType": "STRING",
+      "id": 4,
+      "isExpanded": true,
+      "isMultiple": false,
+      "name": "challenges"
+    },
+    {
+      "child": [],
+      "dataType": "STRING",
+      "id": 5,
+      "isExpanded": true,
+      "isMultiple": false,
+      "name": "risk"
+    },
+    {
+      "child": [],
+      "dataType": "STRING",
+      "id": 6,
+      "isExpanded": true,
+      "isMultiple": false,
+      "name": "outlook"
+    }
+  ]
+]

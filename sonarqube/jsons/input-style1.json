@@ -1,0 +1,78 @@
+[
+  [
+    {
+      " bill_of_exchange": {
+        "bill_number": {
+          "value": "MD-01",
+          "page": "NOT_FOUND",
+          "page_content": "",
+          "highlight": {
+            "top": null,
+            "height": null,
+            "width": null,
+            "left": null
+          }
+        },
+        "date": {
+          "value": "20210430",
+          "page": "NOT_FOUND",
+          "page_content": "",
+          "highlight": {
+            "top": null,
+            "height": null,
+            "width": null,
+            "left": null
+          }
+        },
+        "place": {
+          "value": "Tokyo, Japan",
+          "page": "NOT_FOUND",
+          "page_content": "",
+          "highlight": {
+            "top": null,
+            "height": null,
+            "width": null,
+            "left": null
+          }
+        }
+      }
+    },
+    {
+      "purchase_order": {
+        "po_number": {
+          "value": "NOT_FOUND",
+          "page": "NOT_FOUND",
+          "page_content": "",
+          "highlight": {
+            "top": null,
+            "height": null,
+            "width": null,
+            "left": null
+          }
+        },
+        "date": {
+          "value": "20210430",
+          "page": "NOT_FOUND",
+          "page_content": "",
+          "highlight": {
+            "top": null,
+            "height": null,
+            "width": null,
+            "left": null
+          }
+        },
+        "vendor_name": {
+          "value": "NOT_FOUND",
+          "page": "NOT_FOUND",
+          "page_content": "",
+          "highlight": {
+            "top": null,
+            "height": null,
+            "width": null,
+            "left": null
+          }
+        }
+      }
+    }
+  ]
+]

@@ -1,0 +1,327 @@
+{
+    "transaction_id": "AIXP5783",
+    "status": "COMPLETED",
+    "output": [
+        {
+            " bill_of_exchange": {
+                "bill_number": "MD-01",
+                "date": "20210430",
+                "place": "HSBC COMMERCIAL BANK, LTD"
+            },
+            "purchase_order": {
+                "po_number": "MD-01",
+                "date": "20210430",
+                "vendor_name": "HSBC COMMERCIAL BANK, LTD"
+            }
+        }
+    ],
+    "execution_time": 24.391084,
+    "nodes_executed": [
+        {
+            "node_id": "3",
+            "display_name": "Data Ingestion",
+            "status": "COMPLETED",
+            "execution_time": 14.179163694381714,
+            "execution_order": 1,
+            "output": {},
+            "resolved_input": "{\"usecase_code\": \"GGBU165\", \"agent_id\": \"241\", \"node_id\": \"3\", \"transaction_id\": \"AIXP5783\", \"file\": {\"file_id\": 102901, \"file_name\": \"boe20260304210229.pdf\"}}",
+            "search_context": null,
+            "logs": {
+                "documents_processed": 1
+            }
+        },
+        {
+            "node_id": "4",
+            "display_name": "Task",
+            "status": "COMPLETED",
+            "execution_time": 4.263413906097412,
+            "execution_order": 2,
+            "output": {
+                "document_type": "bill_of_exchange",
+                "document_confidence": 0.95,
+                "reasoning": "The document contains the key characteristics of a bill of exchange: a formal written order from one party to another (or a third party) to pay a specified amount of money, typically dated, signed, and including terms of payment such as the amount, due date, and parties involved. These elements match the standard definition of a bill of exchange, leading to a high confidence classification."
+            },
+            "resolved_input": "Give the output same to same as : \n  'document_type': 'bill_of_exchange',\n  'document_confidence': 0.95,\n  'reasoning': 'Give your reasoning for the document classification.'\n",
+            "search_context": {
+                "search": [
+                    {
+                        "highlight": {
+                            "height": 0.6900406504065041,
+                            "left": 0.2125984251968504,
+                            "top": 0.3099593495934959,
+                            "width": 0.7874015748031497
+                        },
+                        "page": 1,
+                        "page_content": "BILL OF EXCHANGE Draft No.MD-01 For:USD30,804.70 Date: APR 30, 2021 At_ *** sightofhiRSTilloaeondofthametenorand date being unpaid), pay to order ofHSBC COMMERCIAL BANK, LTD the SUM Of_SAYTOTALUSDOLLARSTHIRTYTHOUSAND EIGHT HUNDRED ANDCENTSSEVENTYONLY value received Drawn under MITSUBISHI BANK,LTD IrrevocableL/CNo_11910000235648 dated APRIL 01,2021 To:_MITSUBISHI BANK, LTD CAMIMEX CO, LTD 2\u2013CHOME,MARUNOUCHI, Uaug CHIYODA-KU,TOKYO,JAPAN Authorized Signature"
+                    }
+                ],
+                "search_execution_info": {
+                    "query_execution_info": [
+                        {
+                            "documents": [
+                                {
+                                    "keyword_score": 0.10660036,
+                                    "page_content": "BILL OF EXCHANGE Draft No.MD-01 For:USD30,804.70 Date: APR 30, 2021 At_ *** sightofhiRSTilloaeondofthametenorand date being unpaid), pay to order ofHSBC COMMERCIAL BANK, LTD the SUM Of_SAYTOTALUSDOLLARSTHIRTYTHOUSAND EIGHT HUNDRED ANDCENTSSEVENTYONLY value received Drawn under MITSUBISHI BANK,LTD IrrevocableL/CNo_11910000235648 dated APRIL 01,2021 To:_MITSUBISHI BANK, LTD CAMIMEX CO, LTD 2\u2013CHOME,MARUNOUCHI, Uaug CHIYODA-KU,TOKYO,JAPAN Authorized Signature",
+                                    "page_no": 1,
+                                    "similarity_score": 0.5408572
+                                }
+                            ],
+                            "query": "Purchase Order",
+                            "retriever_strategy": "HYBRID_SEARCH"
+                        }
+                    ],
+                    "reranked_documents": [
+                        {
+                            "page_content": "BILL OF EXCHANGE Draft No.MD-01 For:USD30,804.70 Date: APR 30, 2021 At_ *** sightofhiRSTilloaeondofthametenorand date being unpaid), pay to order ofHSBC COMMERCIAL BANK, LTD the SUM Of_SAYTOTALUSDOLLARSTHIRTYTHOUSAND EIGHT HUNDRED ANDCENTSSEVENTYONLY value received Drawn under MITSUBISHI BANK,LTD IrrevocableL/CNo_11910000235648 dated APRIL 01,2021 To:_MITSUBISHI BANK, LTD CAMIMEX CO, LTD 2\u2013CHOME,MARUNOUCHI, Uaug CHIYODA-KU,TOKYO,JAPAN Authorized Signature",
+                            "page_number": 1,
+                            "reranked_score": 0.016666666666666666
+                        }
+                    ]
+                }
+            },
+            "logs": {
+                "search_execution_info": {
+                    "query_execution_info": [
+                        {
+                            "documents": [
+                                {
+                                    "keyword_score": 0.10660036,
+                                    "page_content": "BILL OF EXCHANGE Draft No.MD-01 For:USD30,804.70 Date: APR 30, 2021 At_ *** sightofhiRSTilloaeondofthametenorand date being unpaid), pay to order ofHSBC COMMERCIAL BANK, LTD the SUM Of_SAYTOTALUSDOLLARSTHIRTYTHOUSAND EIGHT HUNDRED ANDCENTSSEVENTYONLY value received Drawn under MITSUBISHI BANK,LTD IrrevocableL/CNo_11910000235648 dated APRIL 01,2021 To:_MITSUBISHI BANK, LTD CAMIMEX CO, LTD 2\u2013CHOME,MARUNOUCHI, Uaug CHIYODA-KU,TOKYO,JAPAN Authorized Signature",
+                                    "page_no": 1,
+                                    "similarity_score": 0.5408572
+                                }
+                            ],
+                            "query": "Purchase Order",
+                            "retriever_strategy": "HYBRID_SEARCH"
+                        }
+                    ],
+                    "reranked_documents": [
+                        {
+                            "page_content": "BILL OF EXCHANGE Draft No.MD-01 For:USD30,804.70 Date: APR 30, 2021 At_ *** sightofhiRSTilloaeondofthametenorand date being unpaid), pay to order ofHSBC COMMERCIAL BANK, LTD the SUM Of_SAYTOTALUSDOLLARSTHIRTYTHOUSAND EIGHT HUNDRED ANDCENTSSEVENTYONLY value received Drawn under MITSUBISHI BANK,LTD IrrevocableL/CNo_11910000235648 dated APRIL 01,2021 To:_MITSUBISHI BANK, LTD CAMIMEX CO, LTD 2\u2013CHOME,MARUNOUCHI, Uaug CHIYODA-KU,TOKYO,JAPAN Authorized Signature",
+                            "page_number": 1,
+                            "reranked_score": 0.016666666666666666
+                        }
+                    ]
+                },
+                "guardrails_execution_info": {
+                    "input_guards": {
+                        "evaluation": [
+                            {
+                                "system": [
+                                    {
+                                        "info": {},
+                                        "name": "PII Guard",
+                                        "status": "PASSED"
+                                    }
+                                ]
+                            },
+                            {
+                                "user": [
+                                    {
+                                        "info": {},
+                                        "name": "PII Guard",
+                                        "status": "PASSED"
+                                    }
+                                ]
+                            }
+                        ],
+                        "status": "PASSED"
+                    },
+                    "output_guards": {
+                        "evaluation": [
+                            {
+                                "info": {},
+                                "name": "PII Guard",
+                                "status": "PASSED"
+                            }
+                        ],
+                        "status": "PASSED"
+                    }
+                }
+            }
+        },
+        {
+            "node_id": "5",
+            "display_name": "Router",
+            "status": "COMPLETED",
+            "execution_time": 0.001001596450805664,
+            "execution_order": 3,
+            "output": {
+                "decision": {
+                    "status": "ROUTED",
+                    "message": "Routed to 1 path(s).",
+                    "selected_paths": [
+                        "6"
+                    ]
+                },
+                "explanation": [
+                    {
+                        "case": "case_1",
+                        "result": "MATCHED",
+                        "expression": "bill_of_exchange EQUAL_TO bill_of_exchange"
+                    },
+                    {
+                        "case": "case_2",
+                        "result": "NOT MATCHED",
+                        "expression": "bill_of_exchange EQUAL_TO purchase_order"
+                    }
+                ]
+            },
+            "resolved_input": null,
+            "search_context": null,
+            "logs": {
+                "matched_routes": [
+                    "6"
+                ]
+            }
+        },
+        {
+            "node_id": "6",
+            "display_name": "Task",
+            "status": "COMPLETED",
+            "execution_time": 5.811849117279053,
+            "execution_order": 4,
+            "output": [
+                {
+                    " bill_of_exchange": {
+                        "bill_number": "MD-01",
+                        "date": "20210430",
+                        "place": "HSBC COMMERCIAL BANK, LTD"
+                    },
+                    "purchase_order": {
+                        "po_number": "MD-01",
+                        "date": "20210430",
+                        "vendor_name": "HSBC COMMERCIAL BANK, LTD"
+                    }
+                }
+            ],
+            "resolved_input": "Extract the following information from this purchase_order:\n      \n      REQUIRED: Po Number, Date, Vendor Name\n\n      \n      TEXT:\n      BILL OF EXCHANGE Draft No.MD-01 For:USD30,804.70 Date: APR 30, 2021 At_ *** sightofhiRSTilloaeondofthametenorand date being unpaid), pay to order ofHSBC COMMERCIAL BANK, LTD the SUM Of_SAYTOTALUSDOLLARSTHIRTYTHOUSAND EIGHT HUNDRED ANDCENTSSEVENTYONLY value received Drawn under MITSUBISHI BANK,LTD IrrevocableL/CNo_11910000235648 dated APRIL 01,2021 To:_MITSUBISHI BANK, LTD CAMIMEX CO, LTD 2\u2013CHOME,MARUNOUCHI, Uaug CHIYODA-KU,TOKYO,JAPAN Authorized Signature\n      \n      Return ONLY valid JSON with these keys:\n      [\"po_number\", \"date\", \"vendor_name\"]\n      \n      Use null for missing values. Dates in YYYYMMDD format.\n      For amount values, include currency and number in one field (e.g., \"USD 12345.67\").\n\nStrictly give output format as JSON:\n{{\n  \"po_number\": \"<output_value>\",\n  \"date\": <output_value>,\n  \"vendor_name\": \"<output_value>\"\n}}\n",
+            "search_context": {
+                "search": [
+                    {
+                        "highlight": {
+                            "height": 0.6900406504065041,
+                            "left": 0.2125984251968504,
+                            "top": 0.3099593495934959,
+                            "width": 0.7874015748031497
+                        },
+                        "page": 1,
+                        "page_content": "BILL OF EXCHANGE Draft No.MD-01 For:USD30,804.70 Date: APR 30, 2021 At_ *** sightofhiRSTilloaeondofthametenorand date being unpaid), pay to order ofHSBC COMMERCIAL BANK, LTD the SUM Of_SAYTOTALUSDOLLARSTHIRTYTHOUSAND EIGHT HUNDRED ANDCENTSSEVENTYONLY value received Drawn under MITSUBISHI BANK,LTD IrrevocableL/CNo_11910000235648 dated APRIL 01,2021 To:_MITSUBISHI BANK, LTD CAMIMEX CO, LTD 2\u2013CHOME,MARUNOUCHI, Uaug CHIYODA-KU,TOKYO,JAPAN Authorized Signature"
+                    }
+                ],
+                "search_execution_info": {
+                    "query_execution_info": [
+                        {
+                            "documents": [
+                                {
+                                    "keyword_score": 0.10660036,
+                                    "page_content": "BILL OF EXCHANGE Draft No.MD-01 For:USD30,804.70 Date: APR 30, 2021 At_ *** sightofhiRSTilloaeondofthametenorand date being unpaid), pay to order ofHSBC COMMERCIAL BANK, LTD the SUM Of_SAYTOTALUSDOLLARSTHIRTYTHOUSAND EIGHT HUNDRED ANDCENTSSEVENTYONLY value received Drawn under MITSUBISHI BANK,LTD IrrevocableL/CNo_11910000235648 dated APRIL 01,2021 To:_MITSUBISHI BANK, LTD CAMIMEX CO, LTD 2\u2013CHOME,MARUNOUCHI, Uaug CHIYODA-KU,TOKYO,JAPAN Authorized Signature",
+                                    "page_no": 1,
+                                    "similarity_score": 0.5138245
+                                }
+                            ],
+                            "query": "What is the vendor name ?",
+                            "retriever_strategy": "HYBRID_SEARCH"
+                        },
+                        {
+                            "documents": [
+                                {
+                                    "keyword_score": 0.10660036,
+                                    "page_content": "BILL OF EXCHANGE Draft No.MD-01 For:USD30,804.70 Date: APR 30, 2021 At_ *** sightofhiRSTilloaeondofthametenorand date being unpaid), pay to order ofHSBC COMMERCIAL BANK, LTD the SUM Of_SAYTOTALUSDOLLARSTHIRTYTHOUSAND EIGHT HUNDRED ANDCENTSSEVENTYONLY value received Drawn under MITSUBISHI BANK,LTD IrrevocableL/CNo_11910000235648 dated APRIL 01,2021 To:_MITSUBISHI BANK, LTD CAMIMEX CO, LTD 2\u2013CHOME,MARUNOUCHI, Uaug CHIYODA-KU,TOKYO,JAPAN Authorized Signature",
+                                    "page_no": 1,
+                                    "similarity_score": 0.51193476
+                                }
+                            ],
+                            "query": "What is the po number ?",
+                            "retriever_strategy": "HYBRID_SEARCH"
+                        }
+                    ],
+                    "reranked_documents": [
+                        {
+                            "page_content": "BILL OF EXCHANGE Draft No.MD-01 For:USD30,804.70 Date: APR 30, 2021 At_ *** sightofhiRSTilloaeondofthametenorand date being unpaid), pay to order ofHSBC COMMERCIAL BANK, LTD the SUM Of_SAYTOTALUSDOLLARSTHIRTYTHOUSAND EIGHT HUNDRED ANDCENTSSEVENTYONLY value received Drawn under MITSUBISHI BANK,LTD IrrevocableL/CNo_11910000235648 dated APRIL 01,2021 To:_MITSUBISHI BANK, LTD CAMIMEX CO, LTD 2\u2013CHOME,MARUNOUCHI, Uaug CHIYODA-KU,TOKYO,JAPAN Authorized Signature",
+                            "page_number": 1,
+                            "reranked_score": 0.016666666666666666
+                        }
+                    ]
+                }
+            },
+            "logs": {
+                "search_execution_info": {
+                    "query_execution_info": [
+                        {
+                            "documents": [
+                                {
+                                    "keyword_score": 0.10660036,
+                                    "page_content": "BILL OF EXCHANGE Draft No.MD-01 For:USD30,804.70 Date: APR 30, 2021 At_ *** sightofhiRSTilloaeondofthametenorand date being unpaid), pay to order ofHSBC COMMERCIAL BANK, LTD the SUM Of_SAYTOTALUSDOLLARSTHIRTYTHOUSAND EIGHT HUNDRED ANDCENTSSEVENTYONLY value received Drawn under MITSUBISHI BANK,LTD IrrevocableL/CNo_11910000235648 dated APRIL 01,2021 To:_MITSUBISHI BANK, LTD CAMIMEX CO, LTD 2\u2013CHOME,MARUNOUCHI, Uaug CHIYODA-KU,TOKYO,JAPAN Authorized Signature",
+                                    "page_no": 1,
+                                    "similarity_score": 0.5138245
+                                }
+                            ],
+                            "query": "What is the vendor name ?",
+                            "retriever_strategy": "HYBRID_SEARCH"
+                        },
+                        {
+                            "documents": [
+                                {
+                                    "keyword_score": 0.10660036,
+                                    "page_content": "BILL OF EXCHANGE Draft No.MD-01 For:USD30,804.70 Date: APR 30, 2021 At_ *** sightofhiRSTilloaeondofthametenorand date being unpaid), pay to order ofHSBC COMMERCIAL BANK, LTD the SUM Of_SAYTOTALUSDOLLARSTHIRTYTHOUSAND EIGHT HUNDRED ANDCENTSSEVENTYONLY value received Drawn under MITSUBISHI BANK,LTD IrrevocableL/CNo_11910000235648 dated APRIL 01,2021 To:_MITSUBISHI BANK, LTD CAMIMEX CO, LTD 2\u2013CHOME,MARUNOUCHI, Uaug CHIYODA-KU,TOKYO,JAPAN Authorized Signature",
+                                    "page_no": 1,
+                                    "similarity_score": 0.51193476
+                                }
+                            ],
+                            "query": "What is the po number ?",
+                            "retriever_strategy": "HYBRID_SEARCH"
+                        }
+                    ],
+                    "reranked_documents": [
+                        {
+                            "page_content": "BILL OF EXCHANGE Draft No.MD-01 For:USD30,804.70 Date: APR 30, 2021 At_ *** sightofhiRSTilloaeondofthametenorand date being unpaid), pay to order ofHSBC COMMERCIAL BANK, LTD the SUM Of_SAYTOTALUSDOLLARSTHIRTYTHOUSAND EIGHT HUNDRED ANDCENTSSEVENTYONLY value received Drawn under MITSUBISHI BANK,LTD IrrevocableL/CNo_11910000235648 dated APRIL 01,2021 To:_MITSUBISHI BANK, LTD CAMIMEX CO, LTD 2\u2013CHOME,MARUNOUCHI, Uaug CHIYODA-KU,TOKYO,JAPAN Authorized Signature",
+                            "page_number": 1,
+                            "reranked_score": 0.016666666666666666
+                        }
+                    ]
+                },
+                "guardrails_execution_info": {
+                    "input_guards": {
+                        "evaluation": [
+                            {
+                                "system": [
+                                    {
+                                        "info": {},
+                                        "name": "PII Guard",
+                                        "status": "PASSED"
+                                    }
+                                ]
+                            },
+                            {
+                                "user": [
+                                    {
+                                        "info": {},
+                                        "name": "PII Guard",
+                                        "status": "PASSED"
+                                    }
+                                ]
+                            }
+                        ],
+                        "status": "PASSED"
+                    },
+                    "output_guards": {
+                        "evaluation": [
+                            {
+                                "info": {},
+                                "name": "PII Guard",
+                                "status": "PASSED"
+                            }
+                        ],
+                        "status": "PASSED"
+                    }
+                }
+            }
+        }
+    ],
+    "annotation": "AI generated content, created using gpt-oss, by 19450, on 2026-03-04 21:05:16 using TCS BaNCS AI Compass - GenAI Services.",
+    "metadata": {
+        "nodes_count": 4,
+        "execution_mode": "langgraph"
+    }
+}

@@ -1,0 +1,80 @@
+{
+    "transaction_id": "AIXP5784",
+    "status": "COMPLETED",
+    "output": {
+        "output_response": "Tata Consultancy Services (TCS) is a leading global IT services, consulting, and business solutions organization. It consistently ranks among the top IT service providers worldwide and plays a significant role in technology-driven transformations for clients across industries."
+    },
+    "execution_time": 4.735461,
+    "nodes_executed": [
+        {
+            "node_id": "3",
+            "display_name": "Task",
+            "status": "COMPLETED",
+            "execution_time": 4.691999673843384,
+            "execution_order": 1,
+            "output": {
+                "output_response": "Tata Consultancy Services (TCS) is a leading global IT services, consulting, and business solutions organization. It consistently ranks among the top IT service providers worldwide and plays a significant role in technology-driven transformations for clients across industries."
+            },
+            "resolved_input": "You are going to answer the queries ask by user. \n\nINPUT QUERY:\ntell me about tcs in 2 lines.\n\n- Return the response in JSON format mentioned below. Map the response to the key \"Output Response\" specified in Output Format.\n- Only return the JSON, no additional text.\n\nOutput Format :\n{\"output_response\" : <response>}\n",
+            "search_context": {},
+            "logs": {
+                "search_execution_info": {},
+                "guardrails_execution_info": {
+                    "input_guards": {
+                        "evaluation": [
+                            {
+                                "system": [
+                                    {
+                                        "info": {},
+                                        "name": "PII Guard",
+                                        "status": "PASSED"
+                                    },
+                                    {
+                                        "info": {},
+                                        "name": "Harm/Toxic Guard",
+                                        "status": "PASSED"
+                                    }
+                                ]
+                            },
+                            {
+                                "user": [
+                                    {
+                                        "info": {},
+                                        "name": "PII Guard",
+                                        "status": "PASSED"
+                                    },
+                                    {
+                                        "info": {},
+                                        "name": "Harm/Toxic Guard",
+                                        "status": "PASSED"
+                                    }
+                                ]
+                            }
+                        ],
+                        "status": "PASSED"
+                    },
+                    "output_guards": {
+                        "evaluation": [
+                            {
+                                "info": {},
+                                "name": "Harm/Toxic Guard",
+                                "status": "PASSED"
+                            },
+                            {
+                                "info": {},
+                                "name": "PII Guard",
+                                "status": "PASSED"
+                            }
+                        ],
+                        "status": "PASSED"
+                    }
+                }
+            }
+        }
+    ],
+    "annotation": "AI generated content, created using phi4, by 19450, on 2026-03-04 21:10:34 using TCS BaNCS AI Compass - GenAI Services.",
+    "metadata": {
+        "nodes_count": 1,
+        "execution_mode": "langgraph"
+    }
+}
