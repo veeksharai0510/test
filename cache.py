@@ -173,7 +173,5 @@ def get_redis_client(mode_type:str):
     mode_type = mode_type.lower()
     if mode_type =="cre":
         return cre_config.redis_client
-    elif mode_type=="rte":
-        return rte_config.redis_client
     else:
         raise InvalidMode
