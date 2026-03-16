@@ -167,3 +167,13 @@ cache_data = CacheData(
             usecase_code=result["AD_USECASE_CODE"])
 set_cache(key, cache_data, redis_client)
 get_cache(key, redis_client)
+
+part 3.1:
+def get_redis_client(mode_type:str):
+    mode_type = mode_type.lower()
+    if mode_type =="cre":
+        return cre_config.redis_client
+    elif mode_type=="rte":
+        return rte_config.redis_client
+    else:
+        raise InvalidMode
