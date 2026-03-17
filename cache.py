@@ -1,34 +1,33 @@
 part1:
 
 import os
-import redis
-class RedisConfig:
-    def __init__(self, host, port, password):
-        self.RC_HOST = host
-        self.RC_PORT = port
-        self.RC_PASS = password
- 
-    def redis_as_dict(self):
+import hazelcast
+class HazelcastConfig:
+    def __init__(self, cluster_name, members):
+        self.HZ_CLUSTER = cluster_name
+        self.HZ_MEMBERS = members
+        logger.info(f'members are {members}')
+    
+    def hazel_as_dict(self):
         return {
-            "RC_HOST": self.RC_HOST,
-            "RC_PORT": self.RC_PORT,
-            "RC_PASS": self.RC_PASS
+            "HZ_CLUSTER": self.HZ_CLUSTER,
+            "HZ_MEMBERS": self.HZ_MEMBERS
         }
- 
     @property
-    def redis_client(self):
-        return redis.Redis(
-            host=self.RC_HOST,
-            port=self.RC_PORT,
-            password=self.RC_PASS,
-            decode_responses=True
+    def hazel_client(self):
+        return hazelcast.HazelcastClient(
+            cluster_name=self.HZ_CLUSTER,
+            cluster_members=self.HZ_MEMBERS
         )
- 
- 
 
-cre_config = RedisConfig(
-    host=os.getenv("CRE_RC_HOST"),
-    port=os.getenv("CRE_RC_PORT"),
+cre_config = HazelcastConfig(
+   cluster_name=os.getenv("CRE_HZ_RC_CLUSTER"),
+   members=os.getenv("CRE_HZ_RC_MEMBERS").split(",")
+)
+
+rte_config = HazelcastConfig(
+   cluster_name=os.getenv("RTE_HZ_RC_CLUSTER"),
+   members=os.getenv("RTE_HZ_RC_MEMBERS").split(",")
 )
 
 
@@ -46,6 +45,21 @@ from app.core.custom_exceptions import NoDataException
 from sqlalchemy.engine import RowMapping
 
 logger = setup_logger(__name__)
+
+class HazelcastClientWrapper:
+    def __init__(self, hz_client):
+        self.client = hz_client
+        self.map = hz_client.get_map("user_cache").blocking()
+    def hgetall(self, key):
+        return self.map.get(key) or {}
+    def hset(self, key, mapping):
+        existing = self.map.get(key) or {}
+        existing.update(mapping)
+        self.map.put(key, existing)
+    def exists(self, key):
+        return self.map.contains_key(key)
+    def close(self):
+        self.client.shutdown()
 
 def normalize_for_json(obj):
    if isinstance(obj, RowMapping):
@@ -153,6 +167,7 @@ def get_cache(key: str, redis_client, auth=False):
         raise e
 
 
+
 part3:
 class CacheData(BaseModel):
     agent_id: Optional[int] = None
@@ -160,7 +175,7 @@ class CacheData(BaseModel):
     version: Optional[int] = None
 
 key=''
-redis_client = get_redis_client(type)
+redis_client = get_hazelcast_client(data.type)
 cache_data = CacheData(
             agent_id=result["AD_ID"],
             agent_code=result["AD_AGENT_CODE"],
@@ -169,9 +184,13 @@ set_cache(key, cache_data, redis_client)
 get_cache(key, redis_client)
 
 part 3.1:
-def get_redis_client(mode_type:str):
+def get_hazelcast_client(mode_type: str):
     mode_type = mode_type.lower()
-    if mode_type =="cre":
-        return cre_config.redis_client
+    if mode_type == "cre":
+        hz_client = cre_config.hazel_client
+        return HazelcastClientWrapper(hz_client)
+    if mode_type == "rte":
+        hz_client = rte_config.hazel_client
+        return HazelcastClientWrapper(hz_client)
     else:
         raise InvalidMode
