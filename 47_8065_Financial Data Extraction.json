@@ -1,0 +1,610 @@
+{
+    "4": [
+        {
+            "Other Expenses": {
+                "Administrative Expenses": [
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Electricity Expenses"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "65.95"
+                            },
+                            {
+                                "score": 0,
+                                "value": "55.72"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Legal & Professional Charges"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "238.80"
+                            },
+                            {
+                                "score": 0,
+                                "value": "145.05"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Payment to Auditors"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "153.60"
+                            },
+                            {
+                                "score": 0,
+                                "value": "120.90"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Printing and Stationary"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "24.51"
+                            },
+                            {
+                                "score": 0,
+                                "value": "20.99"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Postage and Courier Expense"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "2.77"
+                            },
+                            {
+                                "score": 0,
+                                "value": "5.36"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "General Expenses"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "35.34"
+                            },
+                            {
+                                "score": 0,
+                                "value": "20.32"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Telephone and Internet Expenses"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "40.94"
+                            },
+                            {
+                                "score": 0,
+                                "value": "51.01"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Travelling and Conveyance Expense"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "233.50"
+                            },
+                            {
+                                "score": 0,
+                                "value": "357.39"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Tally Software Services"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "50.25"
+                            },
+                            {
+                                "score": 0,
+                                "value": "42.30"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Vehicle Running & Maintainance Exp"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "311.91"
+                            },
+                            {
+                                "score": 0,
+                                "value": "315.83"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Donation"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "0.00"
+                            },
+                            {
+                                "score": 0,
+                                "value": "0.00"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Rent Expense"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "922.80"
+                            },
+                            {
+                                "score": 0,
+                                "value": "684.60"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Office Repair & Maintenance"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "466.19"
+                            },
+                            {
+                                "score": 0,
+                                "value": "528.12"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Insurance on LDO"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "101.92"
+                            },
+                            {
+                                "score": 0,
+                                "value": "33.06"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Preliminiary expenses written off"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "0.00"
+                            },
+                            {
+                                "score": 0,
+                                "value": "133.41"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Storage Tank Services"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "63.24"
+                            },
+                            {
+                                "score": 0,
+                                "value": "0.00"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Technical Services Charges"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "69.22"
+                            },
+                            {
+                                "score": 0,
+                                "value": "0.00"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Office Vehicle Insurance"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "25.89"
+                            },
+                            {
+                                "score": 0,
+                                "value": "0.00"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Registration Fess"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "23.87"
+                            },
+                            {
+                                "score": 0,
+                                "value": "0.00"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Gmail Subscription Charges"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "14.91"
+                            },
+                            {
+                                "score": 0,
+                                "value": "0.00"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Demate Charges"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "0.79"
+                            },
+                            {
+                                "score": 0,
+                                "value": "0.00"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Loss on Sale of Securities"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "210.85"
+                            },
+                            {
+                                "score": 0,
+                                "value": "0.00"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Bad Debts"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "100.00"
+                            },
+                            {
+                                "score": 0,
+                                "value": "0.00"
+                            }
+                        ]
+                    }
+                ],
+                "FY": [
+                    {
+                        "score": 0,
+                        "value": "31st March 2025"
+                    },
+                    {
+                        "score": 0,
+                        "value": "31st March 2024"
+                    }
+                ]
+            }
+        }
+    ],
+    "5": [
+        {
+            "Other Expenses": {
+                "Direct Expenses": [
+                    {
+                        "Expense": {
+                            "score": 1,
+                            "value": "Import Expense"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 1,
+                                "value": "26618.87"
+                            },
+                            {
+                                "score": 2,
+                                "value": "23480.04"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 1,
+                            "value": "Storage Tank Hire Charges"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 1,
+                                "value": "29739.30"
+                            },
+                            {
+                                "score": 2,
+                                "value": "22534.40"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 1,
+                            "value": "Freight Expense"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 1,
+                                "value": "16612.87"
+                            },
+                            {
+                                "score": 2,
+                                "value": "774.57"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 1,
+                            "value": "Testing Charges"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 1,
+                                "value": "26.05"
+                            },
+                            {
+                                "score": 2,
+                                "value": "21.93"
+                            }
+                        ]
+                    }
+                ],
+                "FY": [
+                    {
+                        "score": 1,
+                        "value": "31st March 2025"
+                    },
+                    {
+                        "score": 2,
+                        "value": "31st March 2024"
+                    }
+                ]
+            }
+        }
+    ],
+    "6": [
+        {
+            "Other Expenses": {
+                "FY": [
+                    {
+                        "score": 0,
+                        "value": "31st March 2025"
+                    },
+                    {
+                        "score": 0,
+                        "value": "31st March 2024"
+                    }
+                ],
+                "Selling, Distribution and Packaging Expenses": [
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Advertisement Expenses"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "0.00"
+                            },
+                            {
+                                "score": 0,
+                                "value": "0.00"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Boarding and Lodging Expene"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "11.00"
+                            },
+                            {
+                                "score": 0,
+                                "value": "27.90"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Commision and Discount on Sales"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "10465.36"
+                            },
+                            {
+                                "score": 0,
+                                "value": "3138.40"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Freight Expenses"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "0.00"
+                            },
+                            {
+                                "score": 0,
+                                "value": "5265.58"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Business promotion expenses"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "31.52"
+                            },
+                            {
+                                "score": 0,
+                                "value": "60.69"
+                            }
+                        ]
+                    },
+                    {
+                        "Expense": {
+                            "score": 0,
+                            "value": "Total"
+                        },
+                        "Expense-Val": [
+                            {
+                                "score": 0,
+                                "value": "86662.21"
+                            },
+                            {
+                                "score": 0,
+                                "value": "57817.58"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    "8": [
+        {
+            "Other Expenses": {
+                "FY": [
+                    {
+                        "score": 86662.21,
+                        "value": "31st March 2025"
+                    },
+                    {
+                        "score": 57817.58,
+                        "value": "31st March 2024"
+                    }
+                ],
+                "Total": [
+                    {
+                        "score": 86662.21,
+                        "value": "86662.21"
+                    },
+                    {
+                        "score": 57817.58,
+                        "value": "57817.58"
+                    }
+                ]
+            }
+        }
+    ]
+}
