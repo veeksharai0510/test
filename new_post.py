@@ -39,7 +39,7 @@ def fetch_value_recursive(source: any, key: str) -> any:
 # Handle primitive datatypes.
 def _handle_primitive_type(raw, is_multiple):
     if raw is None:
-        return NOT_FOUND  # always NOT_FOUND (→ None) when absent, regardless of isMultiple
+        return NOT_FOUND
     if is_multiple:
         if isinstance(raw, list):
             return raw
@@ -47,10 +47,13 @@ def _handle_primitive_type(raw, is_multiple):
             return [raw]
     else:
         if isinstance(raw, list):
+            # If it's multiple score/value containers, preserve the full list
+            # so _map_list_value can expand them into FY-1, FY-2, etc.
+            if len(raw) > 1 and all(isinstance(i, dict) and "value" in i for i in raw):
+                return raw  # ← preserve list for expansion
             return raw[-1] if raw else NOT_FOUND
         else:
             return raw
-
 
 # Handle object datatype.
 # Behavior:
@@ -510,10 +513,12 @@ def _map_dict_list_to_mapping(v, wrap):
 
 
 def _map_list_value(k, v, wrap):
-    # List of score/value containers → wrap at once
+    # List of score/value containers with MULTIPLE items → expand into k-1, k-2, ...
     if v and all(isinstance(i, dict) and "value" in i for i in v):
-        return wrap(k, v)
-    # List of child objects → now returns a list (not a flat dict)
+        if len(v) > 1:
+            return {f"{k}-{idx + 1}": wrap(k, item) for idx, item in enumerate(v)}
+        return wrap(k, v)  # single item → keep as-is
+    # List of child objects → returns a list
     if v and all(isinstance(i, dict) for i in v):
         return _map_list_of_dicts(v, k, wrap)
     # Primitives or mixed → wrap as-is
@@ -534,18 +539,26 @@ def _map_dict_obj(obj, fname, wrap):
 
 
 def _map_list_of_dicts(obj, fname, wrap):
-    # List of score/value containers → wrap at once
+    # List of score/value containers with MULTIPLE items → expand into fname-1, fname-2, ...
     if all("value" in i for i in obj):
-        return wrap(fname, obj)
+        if len(obj) > 1:
+            return {f"{fname}-{idx + 1}": wrap(fname, item) for idx, item in enumerate(obj)}
+        return wrap(fname, obj)  # single item → keep as-is
     # List of child objects → preserve as a list, wrapping each item separately
     result = []
     for item in obj:
         wrapped_item = OrderedDict()
         for k, v in item.items():
-            wrapped_item[k] = wrap(k, v)
+            if isinstance(v, list) and v and all(isinstance(i, dict) and "value" in i for i in v):
+                # ← THIS is the fix for Expense-Val inside each child object
+                if len(v) > 1:
+                    wrapped_item[k] = {f"{k}-{idx + 1}": wrap(k, item) for idx, item in enumerate(v)}
+                else:
+                    wrapped_item[k] = wrap(k, v)
+            else:
+                wrapped_item[k] = wrap(k, v)
         result.append(wrapped_item)
     return result
-
 
 def _to_nested_mapping(obj, fname, wrap):
     # Recurse and wrap leaves with their own context
