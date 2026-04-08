@@ -167,19 +167,34 @@ class CAOutputBuilder:
                 val, score, highlight = self._extract_val_score_highlight_from_sub_meta(
                     sub_meta, page, page_content, item
                 )
-                if isinstance(val, list) and len(val) > 1:
+
+                # ✅ Case: Direct Expenses style grouped list → DO NOT index
+                if isinstance(val, list) and all(isinstance(v, dict) for v in val):
+                    # flatten rows directly (matches 47)
                     nested_section = self.set_attribute_output(sub_name, value=None, group_header=True)
-                    for idx, single_val in enumerate(val, start=1):
-                        indexed_name = f"{sub_name} - {idx}"
-                        sub_attr = self.set_attribute_output(
-                            attribute_name=indexed_name,
-                            value=single_val,
-                            score=score,
-                            highlight=highlight,
-                            group_header=False
-                        )
-                        nested_section.set_sub_attr_output(indexed_name, sub_attr)
+
+                    for single_val in val:
+                        for field_name, field_meta in single_val.items():
+                            if looks_like_group_dict(field_meta):
+                                child = self._process_nested_group_section(
+                                    field_name, field_meta, page, page_content, {}
+                                )
+                                nested_section.set_sub_attr_output(field_name, child)
+                            else:
+                                f_val, f_score, f_highlight = self._extract_val_score_highlight_from_sub_meta(
+                                    field_meta, page, page_content, {}
+                                )
+                                child = self.set_attribute_output(
+                                    attribute_name=field_name,
+                                    value=f_val,
+                                    score=f_score,
+                                    highlight=f_highlight,
+                                    group_header=False
+                                )
+                                nested_section.set_sub_attr_output(field_name, child)
+
                     section_output.set_sub_attr_output(sub_name, nested_section)
+                
                 elif isinstance(val, list) and len(val) == 1:
                     attr_output = self.set_attribute_output(
                         attribute_name=sub_name,
@@ -324,7 +339,6 @@ class CAOutputBuilder:
             )
         return
 
-
     def _process_list_item(self, item, entities):
         if not isinstance(item, dict):
             return
@@ -435,7 +449,7 @@ class CAOutputBuilder:
         
         # return Entities only if it contains anything, else return empty list
         return [entities.__dict__] if entities.sub_attr_output else []
-
+    
 
 data =  {
         "extraction_details": {
@@ -460,17 +474,14 @@ def _extract_attr_name(sub_attr):
 def _extract_vals_from_dict_entry(v, sub_attr):
     vals = []
     if "attr_name" in v and "attr_value" in v:
-        av = v.get("attr_value")
-        # ADD THIS: unwrap value-wrapper dicts like {"value": null, "page": ..., "highlight": ...}
-        if isinstance(av, dict) and "value" in av:
-            av = av.get("value")
-        vals.append({"attr_name": v.get("attr_name"), "attr_value": av})
+        if v["attr_value"] is not None and v["attr_value"] != "":
+            vals.append({"attr_name": v.get("attr_name"), "attr_value": v.get("attr_value")})
     elif "attr_value" in v:
         av = v["attr_value"]
         if isinstance(av, dict):
             for k, vv in av.items():
                 vals.append({"attr_name": k, "attr_value": vv})
-        else:
+        elif av is not None and av != "":
             vals.append({"attr_name": _extract_attr_name(sub_attr), "attr_value": av})
     return vals
 
@@ -481,8 +492,8 @@ def _extract_attr_values(sub_attr):
         if isinstance(v, dict):
             vals.extend(_extract_vals_from_dict_entry(v, sub_attr))
         else:
-            # CHANGE: remove the null/empty check
-            vals.append({"attr_name": _extract_attr_name(sub_attr), "attr_value": v})
+            if v is not None and v != "":
+                vals.append({"attr_name": _extract_attr_name(sub_attr), "attr_value": v})
     return vals
 
 def _build_value_entry(v, item, name, high_light):
