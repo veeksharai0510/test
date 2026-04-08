@@ -168,31 +168,47 @@ class CAOutputBuilder:
                     sub_meta, page, page_content, item
                 )
 
-                # ✅ Case: Direct Expenses style grouped list → DO NOT index
+                # Alternative: Keep current flat approach but pair related fields
                 if isinstance(val, list) and all(isinstance(v, dict) for v in val):
-                    # flatten rows directly (matches 47)
                     nested_section = self.set_attribute_output(sub_name, value=None, group_header=True)
-
-                    for single_val in val:
-                        for field_name, field_meta in single_val.items():
-                            if looks_like_group_dict(field_meta):
-                                child = self._process_nested_group_section(
-                                    field_name, field_meta, page, page_content, {}
-                                )
-                                nested_section.set_sub_attr_output(field_name, child)
-                            else:
+                    # Group items by their field names
+                    items_by_field = {}
+                    for item in val:
+                        for field_name, field_meta in item.items():
+                            if field_name not in items_by_field:
+                                items_by_field[field_name] = []
+                            items_by_field[field_name].append((field_meta, page, page_content, item))
+                    # Process each field group
+                    for field_name, field_items in items_by_field.items():
+                        if len(field_items) == 1:
+                            # Single item - don't group
+                            f_val, f_score, f_highlight = self._extract_val_score_highlight_from_sub_meta(
+                                field_items[0][0], field_items[0][1], field_items[0][2], field_items[0][3]
+                            )
+                            child = self.set_attribute_output(
+                                attribute_name=field_name,
+                                value=f_val,
+                                score=f_score,
+                                highlight=f_highlight,
+                                group_header=False
+                            )
+                            nested_section.set_sub_attr_output(field_name, child)
+                        else:
+                            # Multiple items for same field - create grouped section
+                            field_section = self.set_attribute_output(field_name, value=None, group_header=True)
+                            for idx, (field_meta, pg, pg_content, itm) in enumerate(field_items, start=1):
                                 f_val, f_score, f_highlight = self._extract_val_score_highlight_from_sub_meta(
-                                    field_meta, page, page_content, {}
+                                    field_meta, pg, pg_content, itm
                                 )
                                 child = self.set_attribute_output(
-                                    attribute_name=field_name,
+                                    attribute_name=f"{field_name}-{idx}",
                                     value=f_val,
                                     score=f_score,
                                     highlight=f_highlight,
                                     group_header=False
                                 )
-                                nested_section.set_sub_attr_output(field_name, child)
-
+                                field_section.set_sub_attr_output(f"{field_name}-{idx}", child)
+                            nested_section.set_sub_attr_output(field_name, field_section)
                     section_output.set_sub_attr_output(sub_name, nested_section)
                 
                 elif isinstance(val, list) and len(val) == 1:
